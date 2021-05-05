@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Introduction Page</title>
+    <link rel="stylesheet" href="/css/site.css">
+</HEAD>
+<body>
+    <a href="/resume">Resume</a>
+    <p style="color:aqua;font-size: large;" title="This is a tooltip for first para">
+        This is my first paragraph
+    </p>
+    <p class="green">
+        This is my second paragraph
+    </p>
+
+    <pre>
+#include &lt;stdio.h&gt;
+int main(){
+
+    return 0;
+}
+    </pre>
+
+    <h1>Being Zero</h1>
+    <h2>Being Zero</h2>
+    <h3>Being Zero</h3>
+    <h4>Being Zero</h4>
+    <h5>Being Zero</h5>
+    <h6>Being Zero</h6>
+
+    <p>This is normal paragraph</p>
+    <p style="font-size:1.5em;">This is 1.5 times paragraph text</p>
+    <p style="font-size:2em;">This is 2 times paragraph text</p>
+    <img width="50%" height="50%" src="https://content3.jdmagicbox.com/comp/hyderabad/g8/040pxx40.xx40.170711200306.t9g8/catalogue/cmr-cet-medchal-rangareddy-engineering-colleges-dclh7pqaxr.jpg?clr=333333" alt="CMRCET IMAGE">
+
+    <h1>List Of Stduents in Our Class</h1>
+    <ol>
+        <li>Sidhu</li>
+        <li>Shruthi</li>
+        <li>Gayatri</li>
+        <li>Venkatesh</li>
+        <li>Chaitanya</li>
+    </ol>
+
+    <h1>Few Technologies Covered in this Course</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Angular</li>
+        <li>NodeJS</li>
+        <li>ExpressJS</li>
+        <li>MongoDB</li>
+    </ul>
+
+    <h1>Terminologies</h1>
+    <dl>
+        <dt>Mongo</dt>
+        <dd>It is a Database</dd>
+        <dt>NodeJS</dt>
+        <dd>JS Runtime Environment</dd>
+    </dl>
+
+    <h1>Educational Qualifications</h1>
+    <table>
+        <tr><th>Institution/University</th><th>Degree</th><th>Year Of Graduation</th></tr>
+        <tr><td>CMRCET</td><td>BTech - CSE</td><td>2022</td></tr>
+        <tr><td>Sri Gayatri College</td><td>Intermediate</td><td>2018</td></tr>
+    </table>
+
+    <h1>Form Tag</h1>
+    <!-- Submitted to the server : front end sends data to backend -->
+    <form>
+        <label>Name</label><input type="text"> <br>
+        <label>DOB</label><input type="date"> <br>
+        <label for="gender">Gender</label><input id="gender" name="gender" type="radio">Male</input><input id="gender" name="gender" type="radio">Female</input><br>
+        <label for="hospital">Hospital</label>
+        <select>
+            <option>Appollo</option>
+            <option>Rainbow</option>
+            <option>Yashoda</option>
+        </select>
+    </form>
+
+    <p id="btnresult" name="btnresult">Here show the text on click of button</p>
+    <input type="range" id="redSlider" min="0" max="255" oninput="onSliderChange()">Red Slider</input>
+    <input type="range" id="greenSlider" min="0" max="255" oninput="onSliderChange()">Green Slider</input>
+    <input type="range" id="blueSlider" min="0" max="255" oninput="onSliderChange()">Blue Slider</input>
+    <button onclick="onClickMe()">Click Me</button>
+    <script src="/js/intro.js"></script>
+</body>
+</html>

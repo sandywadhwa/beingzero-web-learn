@@ -11,6 +11,12 @@ app.get("/", function(req, res){
     res.send("Welcome to My Basic Site");
 })
  
+app.get("/intro", function(req, res){
+    let fullFilePath = __dirname + "/frontend/html/html-intro.html";
+    res.sendFile(fullFilePath);
+});
+
+
 app.get("/resume", function(req, res){
     let fullFilePath = __dirname + "/frontend/html/resume.html";
     res.sendFile(fullFilePath);
