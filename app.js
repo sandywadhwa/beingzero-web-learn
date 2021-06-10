@@ -8,6 +8,8 @@ var dbconnect = require('./backend/lib/connectLib');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+require('./backend/lib/dbUsersBootstrap').createUsers();
+
 var app = express();
 dbconnect.connect();
 app.use(logger('dev'));
