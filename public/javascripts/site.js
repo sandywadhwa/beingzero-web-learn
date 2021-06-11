@@ -9,6 +9,9 @@ $(function(){
         saveUserInLocalStorage : function(userJson){
             window.localStorage.setItem('currentUser', JSON.stringify(userJson));
         },
+        removeCurrentUser: function(){
+            window.localStorage.removeItem('currentUser');
+        },
         getCurrentUser : function(){
             return window.localStorage.getItem('currentUser');
         },
@@ -51,6 +54,14 @@ $(function(){
         onSignIn(false);
     }
 
+
+    $("#lnkLogout").click(function(){
+
+        // TODO:  When session is implemented, delete session on server side also
+
+        userObject.removeCurrentUser(); // will this update UI?
+        onSignIn(false);
+    })
 
     // On click of login button, make AJAX call.
     $("#btnLogin").on('click', function(){
