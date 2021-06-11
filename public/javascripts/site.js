@@ -21,7 +21,7 @@ $(function(){
         userObj.password = $("#txtPassword").val();
         $.post( "/api/login", userObj)
         .done(function( data ) {
-            // alert( "Data Loaded: " + JSON.stringify(data) );
+            alert( "Data Loaded: " + JSON.stringify(data) );
             if(data.success){
                 toastr.success('Login Successful');
                 // front end session management
