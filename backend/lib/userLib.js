@@ -6,7 +6,14 @@ module.exports.isUserValid = function(userJson, cb){
 
     // Do not pass req.body directly as query
     // if req.body = {username:'username'}
-    var query = {username: userJson.username, password:userJson.password, isDeleted:false};
+
+
+    // How to write this query to say, isDelete not equal to true
+
+    //var query = {username: userJson.username, password:userJson.password, isDeleted:false};
+
+    var query = {username: userJson.username, password:userJson.password, isDeleted:{$ne : true}};
+
     userModel.find(query, function(err, collections){
         var response = {success: false, message: 'Login Failed', user: null };
         if(err){
