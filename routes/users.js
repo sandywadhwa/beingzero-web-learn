@@ -7,7 +7,8 @@ router.post('/login', function(req, res) {
     userLib.isUserValid(req.body, function(resultJson){
         if(resultJson.success==true){
             console.log("Session for User Initialized");
-            req.session.user = {username: resultJson.username}; // Init session object for this user
+            console.log(resultJson);
+            req.session.user = {username: resultJson.user.username}; // Init session object for this user
         }
         res.json(resultJson);
     })

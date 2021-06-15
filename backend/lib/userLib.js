@@ -26,6 +26,7 @@ module.exports.isUserValid = function(userJson, cb){
         }
         response.success = true;
         response.message = 'Login Successful';
+        console.log(collections[0]);
         response.user = {username: collections[0].username};
         cb(response);
     })
