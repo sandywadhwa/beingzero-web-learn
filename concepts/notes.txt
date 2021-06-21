@@ -125,3 +125,26 @@ Using Promises
       })
       .catch(function(err){
       });
+
+
+
+A. Callback
+B. Promise
+C. Async/Await
+
+
+Third party libraries are also moving to C quickly.
+
+// Old Way
+module.exports.getAllUsers =  function(cb){
+    userModel.find({}, function(err, users){
+        cb(err, users);
+    });
+}
+
+
+// This is possible now
+module.exports.getAllUsers = async function(){
+    var users = await userModel.find({});
+    return users;
+}
