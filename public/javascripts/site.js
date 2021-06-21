@@ -1,4 +1,19 @@
 $(function(){
+
+    setInterval(function(){
+        $.ajax( "/api/quote" )
+            .done(function(data) {
+                console.log( JSON.stringify(data) );
+                $("#quoteText").html(data.text);
+            })
+            .fail(function() {
+                //alert( "error" );
+            })
+            .always(function() {
+                //alert( "complete" );
+            });
+    }, 5000);
+
     console.log("Jquery Running");
     // toastr.success('Toastr Running')
 

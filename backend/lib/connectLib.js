@@ -3,9 +3,13 @@ var config = require('../config/config');
 
 module.exports = {
     connect : function(){
+        console.log("CONNECTION STRING: "+ config.mongo_connection_string);
         mongoose.connect(config.mongo_connection_string, {useCreateIndex:true, useNewUrlParser: true, useUnifiedTopology: true});
         mongoose.connection.on('connected', function(){
             console.log("Mongodb Connected");
         })
+    },
+    disconnect : function(){
+        mongoose.disconnect();
     }
 }

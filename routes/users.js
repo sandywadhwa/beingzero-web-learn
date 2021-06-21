@@ -14,6 +14,14 @@ router.post('/login', function(req, res) {
     })
 });
 
+// Add more quotes
+var quotes = [{text:'if your eyes are positive you will love the world, if your tongue is positive world will love you', author:'anonymous'},
+{text:'if your eyes are positive you', author:'anonymous'}];
+router.get('/quote', (req, res)=>{
+    // TODO: Generate a random index between 0 to sizeOfArray-1
+    var idx = 0;
+    res.json(quotes[idx]);
+});
 
 // Dummy API that will return rol of current user who has requested mailbox --- Through SESSION
 router.get('/mailbox', function(req, res) {
